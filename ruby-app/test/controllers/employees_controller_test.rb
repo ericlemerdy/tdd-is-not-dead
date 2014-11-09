@@ -18,7 +18,7 @@ class EmployeesControllerTest < ActionController::TestCase
 
   test "should create employee" do
     assert_difference('Employee.count') do
-      post :create, employee: {  }
+      post :create, employee: { email: @employee.email, name: @employee.name }
     end
 
     assert_redirected_to employee_path(assigns(:employee))
@@ -35,7 +35,7 @@ class EmployeesControllerTest < ActionController::TestCase
   end
 
   test "should update employee" do
-    patch :update, id: @employee, employee: {  }
+    patch :update, id: @employee, employee: { email: @employee.email, name: @employee.name }
     assert_redirected_to employee_path(assigns(:employee))
   end
 
