@@ -13,7 +13,7 @@ From Scratch:
 $ rails new ruby-app
 $ cd ruby-app
 $ rails generate scaffold Employees name:string email:string
-$ rails db:migrate
+$ rake db:migrate
 $ rails server &
 ```
 
