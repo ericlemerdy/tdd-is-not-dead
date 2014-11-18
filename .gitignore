@@ -1,3 +1,5 @@
 .tern-project
 .settings/
 .project
+.idea/
+*.iml
