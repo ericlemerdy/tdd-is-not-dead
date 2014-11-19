@@ -494,3 +494,43 @@ body     { pointer-events: none; }
     display: block;
 }
 
+.calendar {
+    line-height: normal;
+    padding-top: 150px;
+}
+
+.month {
+    font-size: 73px;
+    color: #F91E25;
+    font-weight: lighter;
+}
+
+.days {
+    font-weight: bolder;
+}
+
+.cell {
+    float: left;
+    width: 100px;
+    text-align: center;
+}
+
+.spacer {
+    clear: both;
+}
+
+.out-of-month {
+    color: darkgrey;
+}
+
+#behind-october.future {
+    opacity: 0;
+}
+
+#behind-october.present {
+    opacity: 1;
+}
+
+#behind-october.past {
+    opacity: 0;
+}
