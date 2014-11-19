@@ -1,7 +1,7 @@
 ### Use bower in docker:
 ```
 docker start dockerfile/nodejs-bower-grunt
-docker run dockerfile/nodejs-bower-grunt
+docker run -i -v $(pwd):/data dockerfile/nodejs-bower-grunt /bin/sh
 ```
 
 ### From the container, download impress:
