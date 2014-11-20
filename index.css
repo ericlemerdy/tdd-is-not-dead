@@ -1,30 +1,13 @@
 .calendar {
     line-height: normal;
-    padding-top: 150px;
+    padding-top: 280px;
 }
 
 .month {
     font-size: 73px;
     color: #F91E25;
     font-weight: lighter;
-}
-
-.days {
-    font-weight: bolder;
-}
-
-.cell {
-    float: left;
-    width: 100px;
     text-align: center;
-}
-
-.spacer {
-    clear: both;
-}
-
-.out-of-month {
-    color: darkgrey;
 }
 
 #decoupling-from-rails.future { opacity: 0; }
