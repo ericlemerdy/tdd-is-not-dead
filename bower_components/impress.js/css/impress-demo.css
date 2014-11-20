@@ -523,14 +523,12 @@ body     { pointer-events: none; }
     color: darkgrey;
 }
 
-#behind-october.future {
-    opacity: 0;
-}
-
-#behind-october.present {
-    opacity: 1;
-}
-
-#behind-october.past {
-    opacity: 0;
-}
+#decoupling-from-rails.future { opacity: 0; }
+#decoupling-from-rails.present { opacity: 1; }
+#decoupling-from-rails.past { opacity: 0; }
+#monogamous-tdd.future { opacity: 0; }
+#monogamous-tdd.present { opacity: 1; }
+#monogamous-tdd.past { opacity: 0; }
+#rip-tdd.future { opacity: 0; }
+#rip-tdd.present { opacity: 1; }
+#rip-tdd.past { opacity: 0; }
