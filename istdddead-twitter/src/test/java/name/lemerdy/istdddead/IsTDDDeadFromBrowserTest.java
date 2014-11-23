@@ -15,7 +15,7 @@ public class IsTDDDeadFromBrowserTest {
     public void should_get_tweets_from_web_page() {
         IsTDDDeadFromBrowser isTDDDeadFromBrowser = new IsTDDDeadFromBrowser("/acceptance/search.html");
 
-        List<Tweet> tweets = isTDDDeadFromBrowser.tweets;
+        List<Tweet> tweets = isTDDDeadFromBrowser.get();
 
         assertThat(tweets).hasSize(20)
                 .startsWith(
@@ -28,7 +28,7 @@ public class IsTDDDeadFromBrowserTest {
     public void should_get_tweets_from_infinite_load() {
         IsTDDDeadFromBrowser isTDDDeadFromBrowser = new IsTDDDeadFromBrowser("/acceptance/search.html", "/acceptance/timeline.json");
 
-        List<Tweet> tweets = isTDDDeadFromBrowser.tweets;
+        List<Tweet> tweets = isTDDDeadFromBrowser.get();
 
         assertThat(tweets)
                 .hasSize(40)

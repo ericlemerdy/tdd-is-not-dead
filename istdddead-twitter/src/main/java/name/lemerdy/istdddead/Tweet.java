@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Tweet {
     private final String id;
     private final String author;
-    private final LocalDate date;
+    final LocalDate date;
 
     public Tweet(String id, String author, LocalDate date) {
         this.id = id;

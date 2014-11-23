@@ -10,6 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.Instant;
 import java.util.*;
+import java.util.function.Supplier;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
@@ -21,13 +22,18 @@ import static java.util.Collections.unmodifiableList;
 import static java.util.Optional.empty;
 import static java.util.stream.Collectors.toList;
 
-public class IsTDDDeadFromBrowser {
-    final List<Tweet> tweets;
+public class IsTDDDeadFromBrowser implements Supplier<List<Tweet>> {
+    private final List<Tweet> tweets;
+
+    @Override
+    public List<Tweet> get() {
+        return tweets;
+    }
 
     public IsTDDDeadFromBrowser(String firstSearch, String... infiniteLoad) {
         List<Tweet> tweets = getTweetsFromFirstSearch(new File(uri(firstSearch)).toPath());
         tweets.addAll(getTweetsFromInfiniteLoad(infiniteLoad));
-        
+
         this.tweets = unmodifiableList(tweets);
     }
 
