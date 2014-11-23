@@ -10,6 +10,11 @@
     text-align: center;
 }
 
+.draw {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 #decoupling-from-rails.future { opacity: 0; }
 #decoupling-from-rails.present { opacity: 1; transition: opacity 0.25s; }
 #decoupling-from-rails.past { opacity: 0; }

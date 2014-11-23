@@ -12,7 +12,6 @@ bower --allow-root install impress-js
 ### Todo
 
  - relire les entrées de blog pour synthétiser
- - recadrer les images pour ne pas qu'elles dépassent
  - terminer les slides d'arguments
  - trouver un exemple de code C1 et C1Test ok ; C2 utilise C1 ; on commence par mocker ; puis on vire le mock
  - trouver un exemple de code C1, C1Test, C2, C2Test ok ; Main utilise C1 et C2 mais plante
