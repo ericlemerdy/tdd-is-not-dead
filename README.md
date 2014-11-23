@@ -1,36 +1,39 @@
 ### tdd-is-not-dead
 
-1. Reproduce the rails application
+#### Getting started: reproduce the rails application
 
-```
-$ docker build -t rails-tdd .
-$ docker run --rm -i --name rails-start -v $(pwd):/usr/src/app -w /usr/src/app -p 3000:3000 rails-tdd /bin/sh
-```
+1. Create an image:
 
-From Scratch:
+        $ docker build -t rails-tdd .
 
-```
-$ rails new ruby-app
-$ cd ruby-app
-$ rails generate scaffold Employees name:string email:string
-$ rake db:migrate
-$ rails server &
-```
+1. If from Scratch generate application files:
 
-Save this state:
+        $ docker run --rm -i --name rails-start -v $(pwd):/usr/src/app -w /usr/src/app -p 3000:3000 rails-tdd /bin/sh
+        $ rails new ruby-app
+        $ cd ruby-app
+        $ rails generate scaffold Employees name:string email:string
+        $ exit
 
-```
-$ # identify id of the container:
-$ docker ps
-$ # tag the container as a new version of the image:
-$ docker commit <sha1> rails-tdd:bundle-installed
-```
+1. Install application and create database schema:
 
-1. Run the rails application
+        $ docker run --rm -i --name rails-start -v $(pwd):/usr/src/app -w /usr/src/app/ruby-app -p 3000:3000 rails-tdd /bin/sh
+        $ bundle install
+        $ rake db:migrate
 
-```
-$ docker run -d --name rails-server -v $(pwd):/usr/src/app -w /usr/src/app/ruby-app -p 3000:3000 rails-tdd:bundle-installed /usr/local/bin/rails server
-```
+1. Save this state on another command line:
+
+        $ # identify id of the container:
+        $ docker ps
+        $ # tag the container as a new version of the image:
+        $ docker commit <containerId> rails-tdd:bundle-installed
+
+1. Go back to your docker app:
+
+        $ exit
+
+1. Run the rails application:
+
+        $ docker run -d --name rails-server -v $(pwd):/usr/src/app -w /usr/src/app/ruby-app -p 3000:3000 rails-tdd:bundle-installed /usr/local/bundle/bin/rails server
 
 
 ## TODO
