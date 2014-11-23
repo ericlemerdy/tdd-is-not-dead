@@ -11,35 +11,35 @@
 }
 
 #decoupling-from-rails.future { opacity: 0; }
-#decoupling-from-rails.present { opacity: 1; }
+#decoupling-from-rails.present { opacity: 1; transition: opacity 0.25s; }
 #decoupling-from-rails.past { opacity: 0; }
 #railsconf.future { opacity: 0; }
-#railsconf.present { opacity: 1; }
+#railsconf.present { opacity: 1; transition: opacity 0.25s; }
 #railsconf.past { opacity: 0; }
 #tdd-is-dead.future { opacity: 0; }
-#tdd-is-dead.present { opacity: 1; }
+#tdd-is-dead.present { opacity: 1; transition: opacity 0.25s; }
 #tdd-is-dead.past { opacity: 0; }
 #monogamous-tdd.future { opacity: 0; }
-#monogamous-tdd.present { opacity: 1; }
+#monogamous-tdd.present { opacity: 1; transition: opacity 0.25s;  }
 #monogamous-tdd.past { opacity: 0; }
 #rip-tdd.future { opacity: 0; }
-#rip-tdd.present { opacity: 1; }
+#rip-tdd.present { opacity: 1; transition: opacity 0.25s;  }
 #rip-tdd.past { opacity: 0; }
 #test-induced-design-damage-blog.future { opacity: 0; }
-#test-induced-design-damage-blog.present { opacity: 1; }
+#test-induced-design-damage-blog.present { opacity: 1; transition: opacity 0.25s;  }
 #test-induced-design-damage-blog.past { opacity: 0; }
 #tdd-and-confidence.future { opacity: 0; }
-#tdd-and-confidence.present { opacity: 1; }
+#tdd-and-confidence.present { opacity: 1; transition: opacity 0.25s;  }
 #tdd-and-confidence.past { opacity: 0; }
 #test-induced-design-damage-video.future { opacity: 0; }
-#test-induced-design-damage-video.present { opacity: 1; }
+#test-induced-design-damage-video.present { opacity: 1; transition: opacity 0.25s;  }
 #test-induced-design-damage-video.past { opacity: 0; }
 #feedback-and-QA.future { opacity: 0; }
-#feedback-and-QA.present { opacity: 1; }
+#feedback-and-QA.present { opacity: 1; transition: opacity 0.25s;  }
 #feedback-and-QA.past { opacity: 0; }
 #costs-of-testing.future { opacity: 0; }
-#costs-of-testing.present { opacity: 1; }
+#costs-of-testing.present { opacity: 1; transition: opacity 0.25s;  }
 #costs-of-testing.past { opacity: 0; }
 #answering-questions.future { opacity: 0; }
-#answering-questions.present { opacity: 1; }
+#answering-questions.present { opacity: 1; transition: opacity 0.25s;  }
 #answering-questions.past { opacity: 0; }
