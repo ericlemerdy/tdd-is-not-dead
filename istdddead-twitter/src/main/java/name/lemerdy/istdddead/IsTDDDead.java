@@ -14,11 +14,11 @@ import java.util.Map;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.summingInt;
 
-public class IsTDDDeadFromTwitter {
+public class IsTDDDead {
 
     private final QueryResult result;
 
-    public IsTDDDeadFromTwitter(QueryResult result) {
+    public IsTDDDead(QueryResult result) {
         this.result = result;
     }
 

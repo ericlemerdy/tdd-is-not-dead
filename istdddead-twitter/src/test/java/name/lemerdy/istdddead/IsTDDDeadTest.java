@@ -7,7 +7,6 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 import twitter4j.*;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.time.Instant;
@@ -23,16 +22,16 @@ import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 
 @RunWith(MockitoJUnitRunner.class)
-public class IsTDDDeadFromTwitterTest {
+public class IsTDDDeadTest {
 
     @Mock
     private QueryResult result;
     
-    private IsTDDDeadFromTwitter isTDDDeadFromTwitter;
+    private IsTDDDead isTDDDead;
 
     @Before
     public void createIsTDDDeadFromTwitter() {
-        isTDDDeadFromTwitter = new IsTDDDeadFromTwitter(result);
+        isTDDDead = new IsTDDDead(result);
     }
 
     @Test
@@ -40,7 +39,7 @@ public class IsTDDDeadFromTwitterTest {
         Status tweet = tweetCreatedAt("1981-12-24T00:00:00.00Z");
         given(result.getTweets()).willReturn(asList(tweet));
 
-        Map<LocalDate, Integer> tweetsByDay = isTDDDeadFromTwitter.tweetsByDay();
+        Map<LocalDate, Integer> tweetsByDay = isTDDDead.tweetsByDay();
 
         assertThat(tweetsByDay).containsExactly(entry(LocalDate.of(1981, Month.DECEMBER, 24), 1));
     }
@@ -51,7 +50,7 @@ public class IsTDDDeadFromTwitterTest {
         Status secondTweet = tweetCreatedAt("1981-12-24T10:00:00.00Z");
         given(result.getTweets()).willReturn(asList(firstTweet, secondTweet));
 
-        Map<LocalDate, Integer> tweetsByDay = isTDDDeadFromTwitter.tweetsByDay();
+        Map<LocalDate, Integer> tweetsByDay = isTDDDead.tweetsByDay();
 
         assertThat(tweetsByDay).containsExactly(entry(LocalDate.of(1981, Month.DECEMBER, 24), 2));
     }
@@ -62,7 +61,7 @@ public class IsTDDDeadFromTwitterTest {
         Status secondTweet = tweetCreatedAt("2012-09-24T00:00:00.00Z");
         given(result.getTweets()).willReturn(asList(firstTweet, secondTweet));
 
-        Map<LocalDate, Integer> tweetsByDay = isTDDDeadFromTwitter.tweetsByDay();
+        Map<LocalDate, Integer> tweetsByDay = isTDDDead.tweetsByDay();
 
         assertThat(tweetsByDay).containsExactly(
                 entry(LocalDate.of(1981, Month.DECEMBER, 24), 1),
@@ -76,7 +75,7 @@ public class IsTDDDeadFromTwitterTest {
         Status secondTweet = tweetCreatedAt("1981-12-24T00:00:00.00Z");
         given(result.getTweets()).willReturn(asList(firstTweet, secondTweet));
 
-        Map<LocalDate, Integer> tweetsByDay = isTDDDeadFromTwitter.tweetsByDay();
+        Map<LocalDate, Integer> tweetsByDay = isTDDDead.tweetsByDay();
 
         assertThat(tweetsByDay).containsExactly(
                 entry(LocalDate.of(1981, Month.DECEMBER, 24), 1),
@@ -88,7 +87,7 @@ public class IsTDDDeadFromTwitterTest {
     public void should_get_empty_tweets_from_empty_file() throws IOException, ClassNotFoundException {
         try (ObjectInputStream objectInputStream = new ObjectInputStream(getClass().getResourceAsStream("/empty.bin"))) {
             QueryResult result = (QueryResult) objectInputStream.readObject();
-            Map<LocalDate, Integer> tweetsByDay = new IsTDDDeadFromTwitter(result).tweetsByDay();
+            Map<LocalDate, Integer> tweetsByDay = new IsTDDDead(result).tweetsByDay();
             assertThat(tweetsByDay).isEmpty();
         }
     }
