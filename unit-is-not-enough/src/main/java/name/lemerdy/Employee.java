@@ -13,4 +13,9 @@ public class Employee {
     public String extractEmailProvider() {
         return email.split("@")[1];
     }
+    
+    @Override
+    public String toString() {
+        return email;
+    }
 }
