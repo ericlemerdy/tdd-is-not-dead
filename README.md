@@ -38,4 +38,8 @@
 
 ## TODO
 
-Repair shell prompt
+Feedback BBL Crafts:
+ - Détailler les arguments dans l'historique de la polémique (Qui sont-ils ? Que disent-ils ?)
+ - Agenda : on comprend pas trop
+ - Jugement des arguments (tampon, on valide !)
+ - Faire participer la salle !
