@@ -34,7 +34,7 @@ public class EmployeesResource {
 
     @Get("/employees/:id")
     public ModelAndView employee(String id, Context context) {
-        if ("new".equals(id)) {
+        if (requestToNewEmployeeAccidentlyMatch(id)) {
             return newEmployee();
         }
         String notice = "";
@@ -46,8 +46,12 @@ public class EmployeesResource {
         return ModelAndView.of("employee", "employee", findById(id), "notice", notice);
     }
 
+    private boolean requestToNewEmployeeAccidentlyMatch(String id) {
+        return "new".equals(id);
+    }
+
     @Get("/employees/new")
-    private ModelAndView newEmployee() {
+    public ModelAndView newEmployee() {
         return ModelAndView.of("employee_new");
     }
 
