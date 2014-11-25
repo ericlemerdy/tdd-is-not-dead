@@ -1,0 +1,24 @@
+---
+layout: default
+title: Editing Employee
+style: /style.css
+---
+
+<h1>Editing employee</h1>
+
+<form accept-charset="UTF-8" action="/employees/edited" class="edit_employee" id="edit_employee" method="post"> <!-- action was /employees/[[employee.id]] -->
+    <input name="id" type="hidden" value="[[employee.id]]">
+    <div class="field">
+        <label for="employee_name">Name</label><br>
+        <input id="employee_name" name="name" type="text" value="[[employee.name]]">
+    </div>
+    <div class="field">
+        <label for="employee_email">Email</label><br>
+        <input id="employee_email" name="email" type="text" value="[[employee.email]]">
+    </div>
+    <div class="actions">
+        <input name="commit" type="submit" value="Update Employee">
+    </div>
+</form>
+
+<a href="/employees/[[employee.id]]">Show</a> | <a href="/employees">Back</a>

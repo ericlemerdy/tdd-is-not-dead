@@ -1,0 +1,23 @@
+---
+layout: default
+title: New Employee
+style: /style.css
+---
+
+<h1>New employee</h1>
+
+<form accept-charset="UTF-8" action="/employees" class="new_employee" id="new_employee" method="post">
+    <div class="field">
+        <label for="employee_name">Name</label><br>
+        <input id="employee_name" name="name" type="text">
+    </div>
+    <div class="field">
+        <label for="employee_email">Email</label><br>
+        <input id="employee_email" name="email" type="text">
+    </div>
+    <div class="actions">
+        <input name="commit" type="submit" value="Create Employee">
+    </div>
+</form>
+
+<a href="/employees">Back</a>
