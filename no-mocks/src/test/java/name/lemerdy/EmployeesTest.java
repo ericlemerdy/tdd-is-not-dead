@@ -11,22 +11,14 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
-@RunWith(MockitoJUnitRunner.class)
 public class EmployeesTest {
-
-    @Mock
-    Employee employeeFromValtech;
-    @Mock
-    Employee employee1FromXebia;
-    @Mock
-    Employee employee2FromXebia;
 
     @Test
     public void should_count_employees_grouped_by_providers() {
-        Employees employees = new Employees(employeeFromValtech, employee1FromXebia, employee2FromXebia);
-        given(employeeFromValtech.extractEmailProvider()).willReturn("valtech.fr");
-        given(employee2FromXebia.extractEmailProvider()).willReturn("xebia.fr");
-        given(employee1FromXebia.extractEmailProvider()).willReturn("xebia.fr");
+        Employees employees = new Employees(
+                new Employee("employee@valtech.fr"),
+                new Employee("employee1@xebia.fr"),
+                new Employee("employee2@xebia.fr"));
 
         Map<String, Long> numberOfEmployeeByEmailProvider = employees.countByEmailProvider();
 
