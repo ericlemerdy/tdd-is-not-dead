@@ -1,3 +1,5 @@
+package name.lemerdy;
+
 public class Employee {
     private final String email;
 
