@@ -8,26 +8,26 @@ import static java.lang.String.format;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class EndToEndTest {
-    private PhantomJsTest phantomJsTest;
+    private PhantomJsTest browser;
 
     @Rule
     public ServerRule serverRule = new ServerRule();
 
     @Before
     public void setUp() {
-        phantomJsTest = new PhantomJsTest(format("http://localhost:%d", serverRule.port()));
-        phantomJsTest.starting();
+        browser = new PhantomJsTest(format("http://localhost:%d", serverRule.port()));
+        browser.starting();
     }
 
     @After
     public void tearDown() {
-        phantomJsTest.getDriver().close();
+        browser.getDriver().close();
     }
 
     @Test
     public void should_show_home_page() {
-        phantomJsTest.goTo("/employees");
+        browser.goTo("/employees");
         
-        assertThat(phantomJsTest.title()).isEqualTo("Employees");
+        assertThat(browser.title()).isEqualTo("Employees");
     }
 }
