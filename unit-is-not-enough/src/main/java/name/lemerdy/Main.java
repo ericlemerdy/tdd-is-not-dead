@@ -12,9 +12,13 @@ public class Main {
         Employee employee2Xebia = new Employee("employee@xEbia.fr");
         Notifier notifier = new Notifier(employeeValtech, employee1Xebia, employee2Xebia);
 
-        List<Employee> notifiedEmployees = notifier.notify("xebia.fr");
+        out.println("Notifying Xebia employees...");
+        out.println();
         
-        out.println("Xebia employees should be migrated.");
+        List<Employee> notifiedEmployees = notifier.notify("xebia.fr");
+
+        out.println();
+        out.println("Expected Xebia employee 1 AND 2 to be notified. Were they ;-) ?");
         out.println(notifiedEmployees);
     }
 
