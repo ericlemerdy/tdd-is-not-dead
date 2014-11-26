@@ -15,21 +15,10 @@ import static net.codestory.http.constants.HttpStatus.FOUND;
 public class EmployeesResource {
     private List<Employee> employees = new ArrayList<>();
 
-    @Get("/employees")
-    public Model employees() {
-        return Model.of("employees", employees);
-    }
-    
     @Post("/employees")
     public Payload createEmployee(Employee newEmployee) {
         employees.add(newEmployee);
         return new Payload(FOUND).withHeader(LOCATION, "/employees/" + newEmployee.id);
-    }
-    
-    @Post("/employees/edited")
-    public Payload employeeEdited(Employee editedEmployee) {
-        findById(editedEmployee.id).updateWith(editedEmployee);
-        return new Payload(FOUND).withHeader(LOCATION, "/employees/" + editedEmployee.id);
     }
 
     @Get("/employees/:id")
@@ -37,22 +26,23 @@ public class EmployeesResource {
         if (requestToNewEmployeeAccidentlyMatch(id)) {
             return newEmployee();
         }
+
         String notice = "";
         if (context.header("referer").endsWith("employees/new")) {
             notice = "Employee was successfully created.";
         } else if (context.header("referer").endsWith("employees/" + id + "/edit")) {
             notice = "Employee was successfully updated.";
         }
-        return ModelAndView.of("employee", "employee", findById(id), "notice", notice);
+        
+        return ModelAndView.of("employee",
+                "employee", findById(id),
+                "notice", notice);
     }
 
-    private boolean requestToNewEmployeeAccidentlyMatch(String id) {
-        return "new".equals(id);
-    }
-
-    @Get("/employees/new")
-    public ModelAndView newEmployee() {
-        return ModelAndView.of("employee_new");
+    @Post("/employees/edited")
+    public Payload employeeEdited(Employee editedEmployee) {
+        findById(editedEmployee.id).updateWith(editedEmployee);
+        return new Payload(FOUND).withHeader(LOCATION, "/employees/" + editedEmployee.id);
     }
 
     @Get("/employees/:id/delete")
@@ -61,9 +51,23 @@ public class EmployeesResource {
         return new Payload(FOUND).withHeader(LOCATION, "/employees");
     }
 
+    @Get("/employees")
+    public Model employees() {
+        return Model.of("employees", employees);
+    }
+
+    @Get("/employees/new")
+    public ModelAndView newEmployee() {
+        return ModelAndView.of("employee_new");
+    }
+
     @Get("/employees/:id/edit")
     public ModelAndView editEmployee(String id) {
         return ModelAndView.of("employee_edit", "employee", findById(id));
+    }
+
+    private boolean requestToNewEmployeeAccidentlyMatch(String id) {
+        return "new".equals(id);
     }
     
     private Employee findById(String id) {

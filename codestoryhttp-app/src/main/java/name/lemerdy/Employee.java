@@ -4,6 +4,7 @@ import java.util.UUID;
 
 public class Employee {
     final String id;
+    
     private String name;
     private String email;
 
@@ -25,5 +26,10 @@ public class Employee {
         name = newEmployee.name;
         email = newEmployee.email;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return name + " <" + email + ">";
     }
 }
