@@ -18,6 +18,10 @@ public class EmployeesResource {
             new Employee("1", "Sébastian", "sebastian@lemerdy.name"),
             new Employee("2", "Éric", "eric@lemerdy.name")));
 
+    public Payload create(Employee employee) {
+        return null;
+    }
+
     @Get("/employees/:id")
     public ModelAndView employee(String id, Context context) {
         if (requestToNewEmployeeAccidentlyMatch(id)) {
