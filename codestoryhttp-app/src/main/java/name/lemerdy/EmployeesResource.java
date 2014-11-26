@@ -18,8 +18,10 @@ public class EmployeesResource {
             new Employee("1", "Sébastian", "sebastian@lemerdy.name"),
             new Employee("2", "Éric", "eric@lemerdy.name")));
 
+    @Post("/employees")
     public Payload create(Employee employee) {
-        return null;
+        employees.add(employee);
+        return new Payload(FOUND).withHeader(LOCATION, "/employees/" + employee.id);
     }
 
     @Get("/employees/:id")
@@ -31,6 +33,8 @@ public class EmployeesResource {
         String notice = "";
         if (context.header("referer").endsWith("employees/" + id + "/edit")) {
             notice = "Employee was successfully updated.";
+        } else if (context.header("referer").endsWith("employees/new")) {
+            notice = "Employee was successfully created.";
         }
         
         return ModelAndView.of("employee",
