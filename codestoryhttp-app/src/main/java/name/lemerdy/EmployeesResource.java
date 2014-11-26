@@ -21,9 +21,9 @@ public class EmployeesResource {
     }
     
     @Post("/employees")
-    public Payload createEmployee(Employee newOrUpdatedEmployee) {
-        employees.add(newOrUpdatedEmployee);
-        return new Payload(FOUND).withHeader(LOCATION, "/employees/" + newOrUpdatedEmployee.id);
+    public Payload createEmployee(Employee newEmployee) {
+        employees.add(newEmployee);
+        return new Payload(FOUND).withHeader(LOCATION, "/employees/" + newEmployee.id);
     }
     
     @Post("/employees/edited")
