@@ -18,12 +18,6 @@ public class EmployeesResource {
             new Employee("1", "Sébastian", "sebastian@lemerdy.name"),
             new Employee("2", "Éric", "eric@lemerdy.name")));
 
-    @Post("/employees")
-    public Payload createEmployee(Employee newEmployee) {
-        employees.add(newEmployee);
-        return new Payload(FOUND).withHeader(LOCATION, "/employees/" + newEmployee.id);
-    }
-
     @Get("/employees/:id")
     public ModelAndView employee(String id, Context context) {
         if (requestToNewEmployeeAccidentlyMatch(id)) {
@@ -31,9 +25,7 @@ public class EmployeesResource {
         }
 
         String notice = "";
-        if (context.header("referer").endsWith("employees/new")) {
-            notice = "Employee was successfully created.";
-        } else if (context.header("referer").endsWith("employees/" + id + "/edit")) {
+        if (context.header("referer").endsWith("employees/" + id + "/edit")) {
             notice = "Employee was successfully updated.";
         }
         
