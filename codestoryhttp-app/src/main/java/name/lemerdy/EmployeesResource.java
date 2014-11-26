@@ -9,11 +9,14 @@ import net.codestory.http.templating.ModelAndView;
 
 import java.util.*;
 
+import static java.util.Arrays.asList;
 import static net.codestory.http.constants.Headers.LOCATION;
 import static net.codestory.http.constants.HttpStatus.FOUND;
 
 public class EmployeesResource {
-    private List<Employee> employees = new ArrayList<>();
+    private List<Employee> employees = new ArrayList<>(asList(
+            new Employee("1", "Sébastian", "sebastian@lemerdy.name"),
+            new Employee("2", "Éric", "eric@lemerdy.name")));
 
     @Post("/employees")
     public Payload createEmployee(Employee newEmployee) {
