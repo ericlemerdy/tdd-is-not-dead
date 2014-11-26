@@ -16,6 +16,13 @@
     background-position: bottom;
 }
 
+.draw blockquote {
+	background-image: url(arguments/dhh.png);
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	padding-left: 60px;
+}
+
 #decoupling-from-rails.future { opacity: 0; }
 #decoupling-from-rails.present { opacity: 1; transition: opacity 0.25s; }
 #decoupling-from-rails.past { opacity: 0; }
