@@ -5,9 +5,7 @@ import org.junit.Test;
 import java.time.LocalDate;
 import java.util.List;
 
-import static java.time.Month.AUGUST;
-import static java.time.Month.JULY;
-import static java.time.Month.OCTOBER;
+import static java.time.Month.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class IsTDDDeadFromBrowserTest {
