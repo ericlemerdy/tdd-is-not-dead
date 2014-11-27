@@ -23,6 +23,23 @@
 	padding-left: 60px;
 }
 
+.mark {
+	font-size: 5em;
+	margin-left: 40%;
+}
+
+.check {
+	color: green;
+}
+
+.cross {
+	color: red;
+}
+
+.almost {
+	color: orange;
+}
+
 .surimpress.future { opacity: 0; }
 .surimpress.present { opacity: 1; transition: opacity 0.25s;  }
 .surimpress.past { opacity: 0; }

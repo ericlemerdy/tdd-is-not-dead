@@ -86,9 +86,16 @@
     <div id="answering-questions" class="step surimpress"              data-x="2000"  data-y="-1500" data-z="1000">
         <img src="assets/history-screenshots/2014-06-04%20Answering%20Questions.png" />
     </div>
+    
+    
+    
     <div class="step slide draw"                                       data-x="3000"  data-y="-500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-1.gif);">
         <blockquote>Beaucoup de développeurs qui supportent TDD vous donnent le sentiment que votre code est sale si vous ne pratiquez pas de TDD.</blockquote>
     </div>
+    <div id="code-sale" class="step surimpress"                        data-x="3000"  data-y="-500" data-rotate="90" data-z="200">
+        <strong class="cross mark">❌</strong>
+    </div>
+    
     <div class="step slide draw"                                       data-x="3000"  data-y="500"  data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-2.gif);">
         <blockquote>Diriger votre design du point de vue des tests unitaires n'est pas une bonne idée.</blockquote>
         <!--
@@ -96,9 +103,17 @@
         quand on dirige notre design par TDD, il faut prendre du recul pour refactorer et faire émerger les patterns de plus haut niveau
         -->
     </div>
+    <div class="step surimpress"                                       data-x="3000"  data-y="500" data-rotate="90" data-z="200">
+        <strong class="cross mark">❌</strong>
+    </div>
+    
     <div class="step slide draw"                                       data-x="3000"  data-y="1500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-3.gif);">
         <blockquote>La notion de TDD disant que "les tests doivent être rapides" est illusoire.</blockquote>
     </div>
+    <div class="step surimpress"                                       data-x="3000"  data-y="1500" data-rotate="90" data-z="200">
+        <strong class="cross mark">❌</strong>
+    </div>
+
     <div class="step slide draw"                                       data-x="3000"  data-y="2500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-4.gif);">
         <blockquote>Suivre TDD peut conduire à l'oubli total de tests plus globaux.</blockquote>
         <!--
@@ -106,20 +121,39 @@
         importance des types de tests : acceptance/intégration/unitaire
          -->
     </div>
+    <div class="step surimpress"                                       data-x="3000"  data-y="2500" data-rotate="90" data-z="200">
+	    <strong class="almost mark">≈</strong>
+    </div>
+
     <div class="step slide draw"                                       data-x="3000"  data-y="3500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-5.gif);">
         <blockquote>L'accent mis sur les tests unitaires et uniquement unitaires n'aide pas à produire un bon système.</blockquote>
         <!-- bout de code : la classe main fail mais C1 C2 sont verts -->
     </div>
+    <div class="step surimpress"                                       data-x="3000"  data-y="3500" data-rotate="90" data-z="200">
+		<strong class="check mark">✓</strong>
+    </div>
+    
     <div class="step slide draw"                                       data-x="3000"  data-y="4500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-6.gif);">
         <blockquote>Une couverture de 100% est ridicule et inutile.</blockquote>
     </div>
+    <div class="step surimpress"                                       data-x="3000"  data-y="4500" data-rotate="90" data-z="200">
+		<strong class="check mark">✓</strong>
+    </div>
+
     <div class="step slide draw"                                       data-x="3000"  data-y="5500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-7.gif);">
         <blockquote>Les développeurs veulent que le logiciel soit une science, mais ce n'est pas le cas. C'est plus une écriture créative.</blockquote>
         <!-- les tests ne sont pas une science -->
     </div>
+    <div class="step surimpress"                                       data-x="3000"  data-y="5500" data-rotate="90" data-z="200">
+    	<strong class="almost mark">≈</strong>
+    </div>
+    
     <div class="step slide draw"                                       data-x="3000"  data-y="6500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-8.gif);">
         <blockquote>Un bon logiciel n'est pas représenté par son ingénierie.</blockquote>
         <!-- exemple: la lampe de poche Androïd vs beta max (VHS) -->
+    </div>
+    <div class="step surimpress"                                       data-x="3000"  data-y="6500" data-rotate="90" data-z="200">
+    	<strong class="check mark">✓</strong>
     </div>
     <div class="step slide draw"                                       data-x="3000"  data-y="7500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-9.gif);">
         <blockquote>Une écriture claire et concise vaut mieux qu'une écriture complexe.</blockquote>
@@ -129,6 +163,10 @@
          RAILS = pas plus clair, plus concis mais sans SRP
         -->
     </div>
+    <div class="step surimpress"                                       data-x="3000"  data-y="7500" data-rotate="90" data-z="200">
+	    <strong class="almost mark">≈</strong>
+    </div>
+    
     <div class="step slide draw"                                       data-x="3000"  data-y="8500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-10.gif);">
         <blockquote>La clarté est importante. Tellement importante qu'elle devrait être le premier objectif visé, et non pas prioriser la couverture et la vitesse des tests.</blockquote>
         <!-- clarté = SRP et non concision !
@@ -136,13 +174,18 @@
         rails te donne ce design (structure) dans lequel le controlleur prend une large responsabilité
          -->
     </div>
+    <div class="step surimpress"                                       data-x="3000"  data-y="8500" data-rotate="90" data-z="200">
+	    <strong class="cross mark">❌</strong>
+    </div>
+    
     <div class="step slide draw"                                       data-x="3000"  data-y="9500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-11.gif);">
         <blockquote>Être un bon développeur est aussi compliqué qu'être un bon écrivain.</blockquote>
         <!-- ok : il faut être un bon écrivain pour écrire des tests car on se met à la place du lecteur -->
-    </div>
-    <div class="step slide draw"                                       data-x="3000"  data-y="10500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-12.gif);">
+        <p>&nbsp;</p>
         <blockquote>Comme pour l'écriture, pour être un bon développeur, il faut écrire et lire beaucoup de programmes.</blockquote>
-        <!-- il veut  -->
+    </div>
+    <div class="step surimpress"                                       data-x="3000"  data-y="9500" data-rotate="90" data-z="200">
+	    <strong class="check mark">✓</strong>
     </div>
     <div id="overview" class="step surimpress"                         data-x="0"     data-y="4500" data-scale="18">
     </div>
