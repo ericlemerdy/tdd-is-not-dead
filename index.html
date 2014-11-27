@@ -200,8 +200,8 @@ if ("ontouchstart" in document.documentElement) {
 <script>
     var impress = document.getElementById("impress");
     impress.addEventListener("impress:stepenter", function (event) {
-        if (event.srcElement.hasAttribute("data-comment")) {
-            console.log(event.srcElement.attributes["data-comment"].value);
+        if (event.target.hasAttribute("data-comment")) {
+            console.log(event.target.attributes["data-comment"].value);
         }
     }, false);
 </script>
