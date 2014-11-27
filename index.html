@@ -96,7 +96,7 @@
         <strong class="cross mark">❌</strong>
     </div>
 
-    <div class="step slide draw"                                      data-x="3000"  data-y="500"  data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-2.gif);" data-comment="
+    <div id="diriger-votre-design-du-point-de-vue-des-tests-unitaires-n-est-pas-une-bonne-idee" class="step slide draw" data-x="3000"  data-y="500"  data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-2.gif);" data-comment="
 bout de code : C2 utilise C1 mais la mock : c'est trop chiant on vire le mock et le test
 quand on dirige notre design par TDD, il faut prendre du recul pour refactorer et faire émerger les patterns de plus haut niveau">
         <blockquote>Diriger votre design du point de vue des tests unitaires n'est pas une bonne idée.</blockquote>
@@ -113,7 +113,7 @@ quand on dirige notre design par TDD, il faut prendre du recul pour refactorer e
         <strong class="cross mark">❌</strong>
     </div>
 
-    <div class="step slide draw"                                      data-x="3000"  data-y="2500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-4.gif);" data-comment="
+    <div id="suivre-tdd-peut-conduire-a-l-oubli-total-de-test-plus-globaux" class="step slide draw" data-x="3000"  data-y="2500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-4.gif);" data-comment="
 pyramides des tests
 importance des types de tests : acceptance/intégration/unitaire">
         <blockquote>Suivre TDD peut conduire à l'oubli total de tests plus globaux.</blockquote>
@@ -122,7 +122,7 @@ importance des types de tests : acceptance/intégration/unitaire">
         <strong class="almost mark">≈</strong>
     </div>
 
-    <div class="step slide draw"                                      data-x="3000"  data-y="3500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-5.gif);" data-comment="
+    <div id="test-unitaires-n-aide-pas-a-produire-un-bon-systeme" class="step slide draw" data-x="3000"  data-y="3500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-5.gif);" data-comment="
 bout de code : la classe main fail mais C1 C2 sont verts">
         <blockquote>L'accent mis sur les tests unitaires et uniquement unitaires n'aide pas à produire un bon système.</blockquote>
     </div>
@@ -138,7 +138,7 @@ bout de code : la classe main fail mais C1 C2 sont verts">
         <strong class="check mark">✓</strong>
     </div>
 
-    <div class="step slide draw"                                      data-x="3000"  data-y="5500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-7.gif);" data-comment="
+    <div id="logiciel-pas-une-science-mais-ecriture-creative" class="step slide draw" data-x="3000"  data-y="5500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-7.gif);" data-comment="
 les tests ne sont pas une science">
         <blockquote>Les développeurs veulent que le logiciel soit une science, mais ce n'est pas le cas. C'est plus une écriture créative.</blockquote>
     </div>
@@ -146,7 +146,7 @@ les tests ne sont pas une science">
         <strong class="almost mark">≈</strong>
     </div>
 
-    <div class="step slide draw"                                      data-x="3000"  data-y="6500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-8.gif);" data-comment="
+    <div id="bon-logiciel-ce-n-est-pas-une-bonne-ingenierie" class="step slide draw" data-x="3000"  data-y="6500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-8.gif);" data-comment="
 exemple: la lampe de poche Androïd vs beta max (VHS)">
         <blockquote>Un bon logiciel n'est pas représenté par son ingénierie.</blockquote>
     </div>
@@ -154,7 +154,7 @@ exemple: la lampe de poche Androïd vs beta max (VHS)">
         <strong class="check mark">✓</strong>
     </div>
 
-    <div class="step slide draw"                                      data-x="3000"  data-y="7500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-9.gif);" data-comment="
+    <div id="claire-concise-mieux-que-ecriture-complexe" class="step slide draw" data-x="3000"  data-y="7500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-9.gif);" data-comment="
 oui ce que le TDD non ultra-unitaire garanti 
 cf. l'exemple de DHH
 TDD = YAGNI, SRP
@@ -165,7 +165,7 @@ RAILS = pas plus clair, plus concis mais sans SRP">
         <strong class="almost mark">≈</strong>
     </div>
 
-    <div class="step slide draw"                                      data-x="3000"  data-y="8500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-10.gif);" data-comment="
+    <div id="clarte-est-importante" class="step slide draw"           data-x="3000"  data-y="8500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-10.gif);" data-comment="
 clarté = SRP et non concision !
 le TDD conduit à un design
 rails te donne ce design (structure) dans lequel le controlleur prend une large responsabilité">
@@ -175,13 +175,10 @@ rails te donne ce design (structure) dans lequel le controlleur prend une large 
         <strong class="cross mark">❌</strong>
     </div>
 
-    <div class="step slide draw"                                      data-x="3000"  data-y="9500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-11.gif);" data-comment="
+    <div id="bon-developpeur-bon-ecrivain" class="step slide draw"    data-x="3000"  data-y="9500" data-rotate="90" data-comment="
 ok : il faut être un bon écrivain pour écrire des tests car on se met à la place du lecteur">
         <blockquote>Être un bon développeur est aussi compliqué qu'être un bon écrivain.</blockquote>
         <p>&nbsp;</p>
-    </div>
-    <div class="step slide draw"                                      data-x="3000"  data-y="10500" data-rotate="90" style="background-image: url(assets/arguments/tdd-is-not-dead-12.gif);" data-comment="
-il veut ">
         <blockquote>Comme pour l'écriture, pour être un bon développeur, il faut écrire et lire beaucoup de programmes.</blockquote>
     </div>
     <div class="step surimpress"                                       data-x="3000"  data-y="9500" data-rotate="90" data-z="200">
@@ -201,7 +198,7 @@ if ("ontouchstart" in document.documentElement) {
     var impress = document.getElementById("impress");
     impress.addEventListener("impress:stepenter", function (event) {
         if (event.target.hasAttribute("data-comment")) {
-            console.log(event.target.attributes["data-comment"].value);
+            console.log(event.target.attributes["id"].value, event.target.attributes["data-comment"].value);
         }
     }, false);
 </script>
