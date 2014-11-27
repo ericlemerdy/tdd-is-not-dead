@@ -44,6 +44,6 @@
 	color: grey;
 }
 
-.surimpress.future { opacity: 0; }
+.surimpress.future  { opacity: 0; }
 .surimpress.present { opacity: 1; transition: opacity 0.25s;  }
-.surimpress.past { opacity: 0; }
+.surimpress.past    { opacity: 0; }
